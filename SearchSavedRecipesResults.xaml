@@ -1,0 +1,214 @@
+﻿<Page x:Class="cooking_app.SearchSavedRecipesResuts"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cooking_app"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="390"
+      Title="SearchSavedRecipesResults"
+      Background="white">
+
+    <DockPanel LastChildFill="False">
+        <DockPanel DockPanel.Dock="Top">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" HorizontalAlignment="Center">
+
+                <Button x:Name="back" Grid.Column="0" Grid.Row="1" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                Height="20" Width="40" Grid.ColumnSpan="2" Click="back_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <TextBlock FontSize="30" Margin="40,10,0,10" 
+                               HorizontalAlignment="Center" FontWeight="Bold" Foreground="#5F5F5F"
+                               Grid.ColumnSpan="3"> 
+                     MY RECIPES
+                </TextBlock>
+                <Button x:Name="generalSearch"  Height="30" Width="30" Background="White" BorderThickness="0" Margin="50,0,0,0" 
+                        Click="generalSearch_Click">
+                    <Image Source="cooking-app;component/img/search.png"/>
+                </Button>
+            </StackPanel>
+
+            <Border DockPanel.Dock="Bottom" BorderThickness="2" BorderBrush="#9B9B9B" HorizontalAlignment="Center" Width="300" Height="36" >
+                <Border.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="14"/>
+                    </Style>
+                </Border.Resources>
+
+                <Button Content="Search Saved Recipes" Width="250" Height="28" Background="White" BorderThickness="0" HorizontalContentAlignment="Left"
+                        Click="searchSaved_Click"/>
+
+            </Border>
+
+
+        </DockPanel>
+
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ScrollViewer>
+                <Grid Margin="-7,0,0,0">
+
+
+                    <StackPanel Name="SavedRecipes" Height="650">
+                        
+                        <!--
+                        
+                        <StackPanel Orientation="horizontal">
+                            <Button x:Name ="catergory1" Grid.Column="0" Grid.Row="3" Width="100" Height="70"
+                     Margin="20,20,10,20" Content="BREAKFAST" Background="#50af18" Foreground="White"
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory1_Click">
+
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+
+                            <Button x:Name="catergory2" Grid.Column="1" Grid.Row="3" Width="100" Height="70"
+                     Margin="10,20,20,20" Content="LUNCH" Background="#50af18" Foreground="White"
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory2_Click">
+
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+                            <Button x:Name="catergory3" Grid.Column="2" Grid.Row="3" Width="100" Height="70"
+                     Margin="0" Content="DINNER" Background="#50af18" Foreground="White"
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory3_Click">
+
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+                        </StackPanel>
+
+
+
+                        <StackPanel Orientation="horizontal">
+
+
+                            <Button  x:Name="catergory4" Grid.Column="0" Grid.Row="4" Width="100" Height="70"
+                     Margin="20,0,10,10" Content="SNACKS" Background="#50af18" Foreground="White"
+                     FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory4_Click">
+
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+                            <Button x:Name="catergory5" Grid.Column="1" Grid.Row="4" Width="100" Height="70"
+                     Margin="10,0,10,10" Content="DESSERT" Background="#50af18" Foreground="White"
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory5_Click">
+
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+
+                            <Button x:Name="catergory6" Grid.Column="2" Grid.Row="4" Width="100" Height="70"
+                     Margin="10,0,0,10" Content="DRINKS" Background="#50af18" Foreground="White"
+                    FontSize="17" FontWeight="Medium" BorderThickness="2" Click="catergory6_Click">
+                                <Button.Resources>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Setter Property="CornerRadius" Value="7"/>
+                                    </Style>
+                                </Button.Resources>
+
+                            </Button>
+
+                        </StackPanel> 
+                        -->
+                                    
+
+                        <!-- Where the recipes are added in-->
+
+                    </StackPanel>
+
+
+
+                    <!--
+            <Border Grid.Column="0" Grid.Row="5" BorderBrush="#5F5F5F" BorderThickness="3"
+                    Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="32,17,32,0"/>
+
+                    <Image x:Name="recipe1" Grid.Column="0" Grid.Row="5" Source="cooking-app;component/img/Mac and cheese.jpg" Height="160"
+                   Width="320" VerticalAlignment="Bottom" Grid.ColumnSpan="3" Margin="30,20,30,0" Stretch="Fill"/>
+
+
+
+            <TextBlock  Grid.Row="6" Grid.Column="0" FontSize="20" HorizontalAlignment="Center"
+                       Margin="0,7,0,10" Grid.ColumnSpan="3" FontWeight="Bold">
+            
+             MAC AND CHEESE
+            </TextBlock>
+
+            <Button x:Name="heart" Grid.Column="2" Grid.Row="6" Height="40" Margin="0,0,30,0"
+                   Width="40" Background="White" BorderThickness="0">
+                <Image Source="/Red heart.jpg"  Grid.ColumnSpan="3"/>
+            </Button>
+
+            <Border Grid.Row="7" Grid.Column="0" Margin="30,0,0,10" Padding="5" BorderThickness="1" BorderBrush="LightGray" Background="#EAEAEA" 
+                    CornerRadius="15" Width="70">
+                <TextBlock Text="30 MIN" HorizontalAlignment="Center"/>
+            </Border>
+
+            <Border Grid.Row="7" Grid.Column="1" Margin="0,0,0,10" Padding="5" BorderThickness="1" BorderBrush="LightGray" Background="#EAEAEA" 
+                    CornerRadius="15" Width="55">
+                <TextBlock Text="EASY" HorizontalAlignment="Center"/>
+            </Border>
+
+
+
+
+
+            <TextBlock  Grid.Row="7" Grid.Column="2" Text="4.4"  Width="30" Margin="0,15,0,0"
+                       />
+
+            <Image x:Name="stars" Grid.Column="2" Grid.Row="7" Source="/stars.jpg" Height="10" Width="60"
+                   Margin="0,0,20,20" Grid.ColumnSpan="3" Stretch="Fill"/>
+
+
+            <Border Grid.Column="0" Grid.Row="8" BorderBrush="#5F5F5F" BorderThickness="8"
+                    Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="32,16,31,40"/>
+
+                    <Image x:Name="recipe2" Grid.Column="0" Grid.Row="8" Source="/Pizza.jpg" Height="160" Width="320"
+                   Margin="35,20,35,0" Grid.ColumnSpan="3" Stretch="Fill"/> -->
+
+
+                </Grid>
+
+
+            </ScrollViewer>
+
+            <!-- Holds divider and Menu buttons -->
+            <local:MenuButtons Grid.Row="1" Grid.Column="0"/>
+
+        </Grid>
+    </DockPanel>
+</Page>

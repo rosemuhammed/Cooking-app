@@ -1,0 +1,144 @@
+﻿<Page x:Class="cooking_app.FilterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:cooking_app"
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="390"
+      Title="FilterPage" Background="white">
+
+    <Page.Resources>
+        <Style TargetType="RadioButton">
+
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Height" Value ="32"/>
+            <Setter Property="Width" Value ="100" />
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Content" Value="Green" />
+
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Foreground" Value="#50AF18" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type Border}">
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+
+    </Page.Resources>
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="15"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="15"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="back" Margin="0,0,0,50" Grid.Column="1" Grid.Row="1" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Back_Click" FontSize="15" Height="35" Width="70">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock Grid.Column="2" Grid.Row="1" Text="EXPLORE BY" VerticalAlignment="Top" FontSize="24" TextAlignment="Center"  Foreground="#5F5F5F" FontWeight="Bold" />
+
+        <TextBlock Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="MEAL"  Foreground="#5F5F5F" FontWeight="Bold" FontSize="18" />
+        <RadioButton Grid.Row="3" Grid.Column="1" x:Name="rbBreakfast" Content="BREAKFAST" GroupName="MEAL"  HorizontalAlignment="Left" Click="Meal_click" Height="32" Width="100"  />
+        <RadioButton Grid.Row="3" Grid.Column="2" x:Name="rbLunch" Content="LUNCH" GroupName="MEAL"  HorizontalAlignment="Center" Click="Meal_click" Height="32" Width="100" />
+        <RadioButton Grid.Row="3" Grid.Column="3" x:Name="rbDinner" Content="DINNER" GroupName="MEAL" HorizontalAlignment="Left" Click="Meal_click"  Height="32" Width="100" />
+        <RadioButton Grid.Row="4" Grid.Column="1" x:Name="rbSnack" Content="SNACK" GroupName="MEAL" HorizontalAlignment="Left" Click="Meal_click"  Height="32" Width="100" />
+        <RadioButton Grid.Row="4" Grid.Column="2" x:Name="rbDessert" Content="DESSERT" GroupName="MEAL" HorizontalAlignment="Center" Click="Meal_click"  Height="32" Width="100" />
+        <RadioButton Grid.Row="4" Grid.Column="3" Margin="0,0,0,30" x:Name="rbDrinks" Content="DRINKS" GroupName="MEAL" HorizontalAlignment="Left" Click="Meal_click"  Height="32" Width="100" />
+
+
+        <TextBlock Grid.Row="5"  Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="DIFFICULTY LEVEL" VerticalAlignment="Top" Foreground="#5F5F5F" FontWeight="Bold" FontSize="18"/>
+        <RadioButton Grid.Row="6" Grid.Column="1" Content="EASY" GroupName="DL"  HorizontalAlignment="Left"  Click="DiffLevel_click"/>
+        <RadioButton  Grid.Row="6" Grid.Column="2" Content="MEDIUM" GroupName="DL" HorizontalAlignment="Left" Click="DiffLevel_click" />
+        <RadioButton Grid.Row="6" Grid.Column="3" Margin="0,0,0,30"  Content="HARD" GroupName="DL" HorizontalAlignment="Left" Click="DiffLevel_click" Checked="RadioButton_Checked" Background="White" />
+
+
+        <TextBlock Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="DIET " VerticalAlignment="Top" Foreground="#5F5F5F" FontWeight="Bold" FontSize="18"/>
+        <RadioButton Grid.Row="8" Grid.Column="1" x:Name="rbKeto" GroupName="Diet" Content="KETO" HorizontalAlignment="Left" Click="Diet_Click" />
+        <RadioButton Grid.Row="9" Grid.Column="1" x:Name="rbGluten" GroupName="Diet" Content="GLUTEN" HorizontalAlignment="Left" Click="Diet_Click" />
+        <RadioButton Grid.Row="8" Grid.Column="3" x:Name="rbVegan"  GroupName="Diet" Content="VEGAN" HorizontalAlignment="Left" Click="Diet_Click" />
+        <RadioButton Grid.Row="8" Grid.Column="2" x:Name="rbLowCarb" GroupName="Diet" Content="LOW-CARBS" HorizontalAlignment="Left" Click="Diet_Click" />
+        <RadioButton Grid.Row="9" Grid.Column="2" Margin="0,0,0,30" GroupName="Diet" x:Name="rbVeg" Content="VEGETARIAN" HorizontalAlignment="Left" Click="Diet_Click" />
+
+        <TextBlock Grid.Row="10" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="CUISINE " VerticalAlignment="Top" Foreground="#5F5F5F" FontWeight="Bold" FontSize="18"/>
+        <RadioButton Grid.Row="11" Grid.Column="1"  x:Name="rbChinese" GroupName="Cusine" Content="CHINESE" HorizontalAlignment="Left" Click="Cusine_Click"/>
+        <RadioButton Grid.Row="11" Grid.Column="2"  Width="110"  x:Name="rbVeitnamese" GroupName="Cusine" Content="VIETNAMESE" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="11" Grid.Column="3"  x:Name="rbThai" Content="THAI"  GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="12" Grid.Column="1"  x:Name="rbKorean" Content="KOREAN" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="12" Grid.Column="2"  x:Name="rbJAPANESE" Content="JAPANESE" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="12" Grid.Column="3"  x:Name="rbHakka" Content="HAKKA" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="13" Grid.Column="1"  x:Name="rbMexican" Content="MEXICAN" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="13" Grid.Column="2"  x:Name="rbITALIAN" Content="ITALIAN" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="13" Grid.Column="3"  x:Name="rbAmerican" Content="AMERICAN" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="14" Grid.Column="1"  x:Name="rbGREEK" Content="GREEK" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="14" Grid.Column="3"  x:Name="rbIndian" Content="INDIAN" GroupName="Cusine" HorizontalAlignment="Left"  Click="Cusine_Click"/>
+        <RadioButton Grid.Row="14" Grid.Column="2"  Width="135" x:Name="rbMIDDLEEASTERN" GroupName="Cusine" Content="MIDDLE EASTERN" HorizontalAlignment="Left" Click="Cusine_Click"/>
+
+        <TextBlock Grid.Row="15" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="DURATION " VerticalAlignment="Top" Foreground="#5F5F5F" FontWeight="Bold" FontSize="18" Margin="0,30,0,0"/>
+
+        <DockPanel VerticalAlignment="Center" Margin="10"  Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="4">
+            <TextBlock Text="Min" DockPanel.Dock="Left" TextAlignment="Left" Width="40" FontSize="18"/>
+            <TextBlock Text="+mins" DockPanel.Dock="Right" TextAlignment="Right" Width="40" FontSize="16"/>
+
+            <TextBox Text= "{Binding ElementName=MinDuration, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Center" Width="50" FontSize="18" />
+            <Slider x:Name="MinDuration"   VerticalAlignment="Center"  Maximum="360" Value="5" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="minDuration_ValueChanged"/>
+
+        </DockPanel>
+
+        <DockPanel VerticalAlignment="Center" Margin="10"  Grid.Row="17" Grid.Column="1" Grid.ColumnSpan="4">
+            <TextBlock Text="Max" DockPanel.Dock="Left" TextAlignment="Left" Width="40" FontSize="18"/>
+            <TextBlock Text="+mins" DockPanel.Dock="Right" TextAlignment="Right" Width="40" FontSize="16"/>
+
+            <TextBox Text= "{Binding ElementName=MaxDuration, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Center" Width="50" FontSize="18" />
+            <Slider x:Name="MaxDuration"  VerticalAlignment="Center"  Maximum="360" Value="120" TickPlacement="BottomRight" TickFrequency="5" IsSnapToTickEnabled="True" ValueChanged="maxDuration_ValueChanged"/>
+
+        </DockPanel>
+
+        <Button  x:Name="Apply_Filter" Grid.Column="3" Grid.Row="18" Content="Clear all" Width="90" Height="35" FontSize="15" Margin="10,25,10,0" Foreground="#FF120C0C" Background="#50AF18" FontWeight="Bold" Click ="clear_click" >
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+
+            </Button.Resources>
+
+        </Button>
+
+    </Grid>
+</Page>

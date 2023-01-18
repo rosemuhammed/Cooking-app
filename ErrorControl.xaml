@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="cooking_app.ErrorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:cooking_app"
+             mc:Ignorable="d" 
+             d:DesignHeight="221" d:DesignWidth="345">
+    <Grid Background="White">
+        <TextBlock x:Name="errorMsg" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" TextWrapping="Wrap" FontWeight="Bold" FontSize="15" Text="ERROR HERE" Foreground="red"/>
+    </Grid>
+</UserControl>
